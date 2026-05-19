@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ELERA — Siêu Ưu Đãi Giảm Đến 50%</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Flash Sale ELERA - Giảm đến 50% toàn bộ sản phẩm thời trang nữ cao cấp. Freeship toàn quốc, đổi trả 7 ngày. Chỉ hôm nay!"/>
+<meta name="keywords" content="thời trang nữ, elera, flash sale, giảm giá, ưu đãi"/>
+<meta property="og:title" content="ELERA Flash Sale - Giảm Đến 50%"/>
+<meta property="og:description" content="Chương trình ưu đãi độc quyền - Chỉ hôm nay!"/>
+<meta property="og:type" content="website"/>
+
+<!-- Fonts - Cập nhật font chữ nữ tính hơn -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════
+   ELERA — Variables & Reset
+═══════════════════════════════════════════════ */
+:root {
+  --pink-primary:   #E91E63;
+  --pink-dark:      #C2185B;
+  --pink-light:     #F8BBD0;
+  --pink-pale:      #FCE4EC;
+  --cream:          #FFF5F7;
+  --white:          #FFFFFF;
+  --black:          #1a1a1a;
+  --text-dark:      #2d2d2d;
+  --text-mid:       #666666;
+  --text-light:     #999999;
+  --border:         #FFE0E9;
+  --shadow-soft:    0 4px 24px rgba(233,30,99,0.12);
+  --shadow-medium:  0 8px 32px rgba(233,30,99,0.2);
+  --shadow-strong:  0 12px 48px rgba(233,30,99,0.3);
+  --radius:         12px;
+  --radius-lg:      20px;
+  --transition:     0.35s cubic-bezier(.4,0,.2,1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: linear-gradient(180deg, #FFF5F7 0%, #FFEEF3 50%, #FFF5F7 100%);
+  color: var(--text-dark);
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--pink-primary); border-radius: 3px; }
+
+/* ═══════════════════════════════════════════════
+   HIỆU ỨNG VIỀN CHẠY CHO CÁC CON SỐ (ANIMATED NUMBER)
+═══════════════════════════════════════════════ */
+.animated-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  color: transparent;
+  background: conic-gradient(from 0deg at 50% 50%, var(--pink-primary), var(--pink-dark), var(--pink-light), var(--pink-primary));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: rotateGradient 2.5s linear infinite;
+}
+
+@keyframes rotateGradient {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 200%; }
+}
+
+/* Thêm hiệu ứng viền chạy cho các khung tier (tuỳ chọn) */
+.tier {
+  position: relative;
+  overflow: hidden;
+}
+
+.tier::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 3px;
+  background: conic-gradient(from 0deg, var(--pink-primary), var(--pink-dark), var(--pink-light), var(--pink-primary));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.tier:hover::after {
+  opacity: 1;
+  animation: rotateBorder 1.5s linear infinite;
+}
+
+@keyframes rotateBorder {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════════════
+   MARQUEE (ĐẶT Ở DƯỚI, CHẠY NHANH HƠN)
+═══════════════════════════════════════════════ */
+.notification-ticker {
+  background: linear-gradient(135deg, var(--pink-primary) 0%, var(--pink-dark) 100%);
+  color: white;
+  padding: 12px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+  box-shadow: 0 -4px 12px rgba(233,30,99,0.3);
+}
+
+.notification-ticker::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(90deg, var(--pink-primary) 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.notification-ticker::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(270deg, var(--pink-dark) 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ticker-content {
+  display: flex;
+  animation: marquee 18s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 30px;
+  font-size: 0.9rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.ticker-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.ticker-name {
+  font-weight: 700;
+  color: #FFE082;
+}
+
+.ticker-product {
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* ═══════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════ */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(233,30,99,0.08);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--pink-primary);
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--pink-primary);
+  transition: width 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--pink-primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--pink-primary);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 32px 40px;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.1);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 24px;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   HERO — CHỈNH LAYOUT ĐỂ ƯU ĐÃI NẰM GIỮA VÀ THẲNG HÀNG VỚI COUNTDOWN
+═══════════════════════════════════════════════ */
+.hero {
+  background: linear-gradient(135deg, var(--pink-pale) 0%, var(--cream) 50%, var(--white) 100%);
+  padding: 60px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(233,30,99,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-soft);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--black);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.hero-discount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--pink-primary) 0%, var(--pink-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* CHỈNH LAYOUT ƯU ĐÃI VÀ COUNTDOWN */
+.hero-offers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.offer-item {
+  background: white;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  border: 2px solid var(--border);
+  transition: all 0.3s;
+}
+
+.offer-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--pink-primary);
+}
+
+.offer-label {
+  font-size: 0.8rem;
+  color: var(--pink-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+.offer-value {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* COUNTDOWN NẰM CẠNH ƯU ĐÃI VÀ THẲNG HÀNG */
+.countdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.countdown {
+  display: flex;
+  gap: 12px;
+}
+
+.countdown-unit {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  min-width: 70px;
+  box-shadow: var(--shadow-medium);
+}
+
+.countdown-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.countdown-text {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--shadow-medium);
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+.hero-cta::after {
+  content: '→';
+  font-size: 1.3rem;
+  transition: transform 0.3s;
+}
+
+.hero-cta:hover::after {
+  transform: translateX(5px);
+}
+
+/* HERO IMAGE - THAY ĐỔI ĐỂ HIỂN THỊ 2 KHUNG ẢNH */
+.hero-visual {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+  transition: all 0.4s;
+  background: white;
+  padding: 12px;
+}
+
+.photo-frame:hover {
+  transform: translateY(-8px) rotate(-2deg);
+  box-shadow: 0 20px 60px rgba(233,30,99,0.35);
+}
+
+.photo-frame.large {
+  width: 420px;
+  height: 520px;
+}
+
+.photo-frame.small {
+  width: 320px;
+  height: 400px;
+  margin-top: 40px;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, rgba(233,30,99,0.95), rgba(194,24,91,0.95));
+  color: white;
+  padding: 16px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-discount {
+    font-size: 4.5rem;
+  }
+
+  .hero-visual {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .photo-frame.large,
+  .photo-frame.small {
+    width: 100%;
+    max-width: 400px;
+    height: 450px;
+    margin-top: 0;
+  }
+
+  .hero-offers {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-discount {
+    font-size: 3.5rem;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+  }
+
+  .countdown-unit {
+    min-width: 60px;
+    padding: 12px 14px;
+  }
+
+  .countdown-number {
+    font-size: 1.8rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   FLASH SALE — REDESIGN DRAMATIC
+═══════════════════════════════════════════════ */
+.flash-sale {
+  background: linear-gradient(135deg, #FFF0F5 0%, #FFE8F0 50%, #FFF0F5 100%);
+  padding: 90px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Watermark text nền */
+.flash-sale::before {
+  content: 'SALE';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(180px, 25vw, 380px);
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(233,30,99,0.06);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: -10px;
+  z-index: 0;
+}
+
+/* Glowing orbs decoration */
+.flash-sale::after {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(233,30,99,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.flash-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HEADER ── */
+.flash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.flash-header-left { flex: 1; min-width: 280px; }
+
+.flash-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #FF6B6B, #FF4757);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+  box-shadow: 0 0 20px rgba(255,71,87,0.5);
+  animation: flashPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes flashPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255,71,87,0.4); }
+  50% { box-shadow: 0 0 40px rgba(255,71,87,0.8); }
+}
+
+.flash-badge::before { content: '⚡'; font-size: 1rem; }
+
+.flash-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.flash-title span {
+  background: linear-gradient(135deg, var(--pink-primary), #FF6B6B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.flash-subtitle {
+  font-size: 1rem;
+  color: var(--text-mid);
+  font-weight: 400;
+}
+
+/* Countdown + participant counter bên phải header */
+.flash-header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.flash-timer-block {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(233,30,99,0.2);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+  backdrop-filter: blur(10px);
+}
+
+.flash-timer-label {
+  font-size: 0.75rem;
+  color: var(--text-mid);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.flash-countdown-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.flash-countdown-unit {
+  text-align: center;
+  min-width: 62px;
+}
+
+.flash-countdown-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--pink-primary);
+  line-height: 1;
+  display: block;
+  background: white;
+  border-radius: 10px;
+  padding: 8px 10px;
+  border: 2px solid var(--pink-light);
+  margin-bottom: 5px;
+}
+
+.flash-countdown-text {
+  font-size: 0.65rem;
+  color: var(--text-mid);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.flash-colon {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--pink-primary);
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* Participant block */
+.flash-participant-block {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(233,30,99,0.2);
+  border-radius: var(--radius-lg);
+  padding: 16px 24px;
+  backdrop-filter: blur(10px);
+  min-width: 280px;
+}
+
+.flash-participant-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.flash-participant-label {
+  font-size: 0.78rem;
+  color: var(--text-mid);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.flash-participant-nums {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.flash-participant-nums strong {
+  color: var(--pink-primary);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+}
+
+.flash-participant-bar {
+  height: 6px;
+  background: rgba(233,30,99,0.15);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.flash-participant-fill {
+  height: 100%;
+  width: 66%;
+  background: linear-gradient(90deg, var(--pink-primary), #FF6B6B);
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(233,30,99,0.6);
+  animation: fillBar 1.8s ease-out;
+}
+
+.flash-participant-warn {
+  font-size: 0.78rem;
+  color: #FF6B6B;
+  font-weight: 600;
+}
+
+/* ── MAGAZINE GRID ── */
+.flash-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 340px 280px;
+  gap: 16px;
+}
+
+/* Card featured (lớn, chiếm 2 hàng) */
+.flash-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  background: #111;
+}
+
+.flash-card.featured {
+  grid-row: span 2;
+}
+
+/* Ảnh full fill card */
+.flash-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.flash-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s ease;
+  filter: brightness(0.95);
+}
+
+.flash-card:hover .flash-image img {
+  transform: scale(1.06);
+  filter: brightness(0.85);
+}
+
+/* Gradient overlay — dark editorial style */
+.flash-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(15,5,10,0.82) 0%,
+    rgba(15,5,10,0.35) 40%,
+    rgba(15,5,10,0.08) 70%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+.flash-card:hover::after {
+  background: linear-gradient(to top,
+    rgba(15,5,10,0.90) 0%,
+    rgba(15,5,10,0.45) 45%,
+    rgba(15,5,10,0.10) 75%,
+    transparent 100%);
+}
+
+/* Tag badge */
+.flash-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: linear-gradient(135deg, #FF4757, #FF6B6B);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(255,71,87,0.5);
+}
+
+/* Nội dung card nằm dưới (overlay) */
+.flash-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  z-index: 2;
+  transform: translateY(8px);
+  transition: transform 0.4s ease;
+}
+
+.flash-card:hover .flash-info { transform: translateY(0); }
+
+.flash-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+.flash-card.featured .flash-name { font-size: 2.2rem; }
+
+.flash-desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 14px;
+  line-height: 1.5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s;
+  opacity: 0;
+}
+
+.flash-card:hover .flash-desc {
+  max-height: 60px;
+  opacity: 1;
+}
+
+.flash-pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.flash-price-original {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.55);
+  text-decoration: line-through;
+}
+
+.flash-price-sale {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #FF6B9D;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(255,107,157,0.5);
+}
+
+.flash-card.featured .flash-price-sale { font-size: 2.6rem; }
+
+.flash-price-save {
+  font-size: 0.8rem;
+  background: linear-gradient(135deg, #FF4757, #FF6B6B);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.btn-flash {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: var(--pink-dark);
+  padding: 11px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 0.3px;
+}
+
+.btn-flash::after { content: '→'; transition: transform 0.3s; }
+.btn-flash:hover { background: var(--pink-primary); color: white; transform: translateY(-2px); }
+.btn-flash:hover::after { transform: translateX(4px); }
+
+/* Chiều cao card — controlled by grid-template-rows */
+.flash-card.featured { min-height: unset; }
+.flash-card:not(.featured) { min-height: unset; }
+
+/* Số thứ tự nhỏ góc trên phải */
+.flash-card-num {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(255,255,255,0.08);
+  z-index: 2;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .flash-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 420px 300px;
+  }
+  .flash-card.featured { grid-row: span 1; grid-column: span 2; }
+  .flash-header { flex-direction: column; align-items: flex-start; }
+  .flash-header-right { align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .flash-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 360px); }
+  .flash-card.featured { grid-column: span 1; grid-row: span 1; }
+  .flash-participant-block { min-width: unset; width: 100%; }
+}
+
+/* ═══════════════════════════════════════════════
+   BENEFITS
+═══════════════════════════════════════════════ */
+.benefits {
+  background: var(--white);
+  padding: 80px 24px;
+}
+
+.benefits-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.benefits-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.benefits-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.benefits-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-mid);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.benefit-card {
+  background: var(--cream);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all 0.4s;
+  border: 2px solid transparent;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--pink-light);
+  background: white;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.benefit-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.benefit-desc {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════════
+   TIERS
+═══════════════════════════════════════════════ */
+.tiers {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+  padding: 80px 24px;
+}
+
+.tiers-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.tiers-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tiers-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.tiers-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-mid);
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.tier {
+  background: white;
+  padding: 40px 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  border: 3px solid var(--border);
+  transition: all 0.4s;
+}
+
+.tier.featured {
+  border-color: var(--pink-primary);
+  box-shadow: var(--shadow-medium);
+  transform: scale(1.05);
+}
+
+.tier:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: var(--shadow-strong);
+}
+
+.tier-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.tier-qty {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--pink-primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.tier-label {
+  font-size: 1rem;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.tier-discount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.tier-desc {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.tier-features li {
+  padding: 10px 0;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tier-features li::before {
+  content: '✓';
+  color: var(--pink-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.tier-cta {
+  display: block;
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: var(--shadow-soft);
+  letter-spacing: 0.5px;
+}
+
+.tier-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ═══════════════════════════════════════════════
+   ORDER FORM
+═══════════════════════════════════════════════ */
+.order-section {
+  background: linear-gradient(135deg, var(--pink-pale) 0%, var(--cream) 100%);
+  padding: 80px 24px;
+}
+
+.order-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.order-content {
+  background: white;
+  padding: 48px 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+}
+
+.order-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.order-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.order-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+}
+
+.order-urgency {
+  background: linear-gradient(135deg, #FF6B6B, #FF4757);
+  color: white;
+  padding: 16px 24px;
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 16px rgba(255,71,87,0.3);
+  letter-spacing: 0.5px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 14px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.3s;
+  background: var(--cream);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--pink-primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(233,30,99,0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.quantity-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--cream);
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 2px solid var(--border);
+}
+
+.qty-btn {
+  background: var(--pink-primary);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover {
+  background: var(--pink-dark);
+  transform: scale(1.1);
+}
+
+.qty-display {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  min-width: 30px;
+  text-align: center;
+}
+
+.price-breakdown {
+  background: var(--cream);
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  border: 2px solid var(--border);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.price-row:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+.price-row.total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--pink-primary);
+  padding-top: 16px;
+}
+
+.savings-highlight {
+  color: #FF4757;
+  font-weight: 700;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  padding: 18px 32px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: var(--shadow-medium);
+  letter-spacing: 0.5px;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+.order-trust {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 2px solid var(--border);
+}
+
+.order-trust-item {
+  text-align: center;
+}
+
+.order-trust-badge {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+}
+
+.order-trust-text {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .order-trust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .order-content {
+    padding: 32px 24px;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+.footer {
+  background: linear-gradient(135deg, #FFF0F5 0%, #FFE4EC 100%);
+  color: var(--text-dark);
+  padding: 60px 24px 24px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand {
+  padding-right: 20px;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--pink-primary);
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(233,30,99,0.15);
+  color: var(--pink-primary);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.social-link:hover {
+  background: var(--pink-primary);
+  color: white;
+  transform: translateY(-4px);
+  border-color: var(--pink-primary);
+}
+
+.footer-section h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--pink-dark);
+  font-style: italic;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--pink-primary);
+}
+
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   MODAL
+═══════════════════════════════════════════════ */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: white;
+  padding: 48px 40px;
+  border-radius: var(--radius-lg);
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.3);
+  transform: scale(0.9);
+  transition: transform 0.4s;
+}
+
+.modal.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-check {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: var(--shadow-medium);
+  animation: checkPop 0.6s ease-out;
+}
+
+@keyframes checkPop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.modal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.modal-text {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.modal-code {
+  font-weight: 700;
+  color: var(--pink-primary);
+  font-size: 1.1rem;
+}
+
+.btn-modal {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: var(--shadow-medium);
+  letter-spacing: 0.5px;
+}
+
+.btn-modal:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* ═══════════════════════════════════════════════
+   PARTICIPANT COUNTER (thay thế đồng hồ thứ 2)
+═══════════════════════════════════════════════ */
+.participant-counter {
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+  text-align: center;
+  margin: 0 auto 8px;
+  max-width: 420px;
+  box-shadow: var(--shadow-soft);
+}
+
+.participant-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+.participant-bar-wrap {
+  margin-bottom: 10px;
+}
+
+.participant-bar {
+  width: 100%;
+  height: 14px;
+  background: var(--pink-pale);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.participant-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--pink-primary), var(--pink-dark));
+  border-radius: 999px;
+  animation: fillBar 1.5s ease-out forwards;
+  transform-origin: left;
+}
+
+@keyframes fillBar {
+  from { width: 0 !important; }
+  to { /* width set inline */ }
+}
+
+.participant-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.participant-current {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--pink-primary);
+  line-height: 1;
+}
+
+.participant-limit {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.participant-warning {
+  font-size: 0.88rem;
+  color: #FF6B6B;
+  font-weight: 600;
+  margin-top: 8px;
+  padding: 6px 14px;
+  background: rgba(255,107,107,0.08);
+  border-radius: 50px;
+  display: inline-block;
+}
+
+/* Update benefit-icon to support SVG */
+.benefit-icon svg {
+  color: var(--pink-primary);
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-container">
+    <a href="#" class="logo">ELERA</a>
+    <nav class="nav" id="mobileNav">
+      <a href="#flash-sale" class="nav-link">Flash Sale</a>
+      <a href="#benefits" class="nav-link">Ưu Đãi</a>
+      <a href="#tiers" class="nav-link">Bảng Giá</a>
+      <a href="#order" class="nav-link">Đặt Hàng</a>
+    </nav>
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">⚡ Siêu Ưu Đãi Chỉ Duy Nhất Hôm Nay</div>
+      <h1 class="hero-title">Giảm Đến</h1>
+      <div class="hero-discount animated-number">50%</div>
+      <p class="hero-subtitle">Toàn Bộ Sản Phẩm Thời Trang Nữ Cao Cấp</p>
+      
+      <!-- ƯU ĐÃI VÀ COUNTDOWN NẰM THẲNG HÀNG -->
+      <div class="hero-offers">
+        <div class="offer-grid">
+          <div class="offer-item">
+            <div class="offer-label">FREESHIP</div>
+            <div class="offer-value">Toàn Quốc</div>
+          </div>
+          <div class="offer-item">
+            <div class="offer-label">ĐỔI TRẢ</div>
+            <div class="offer-value">7 Ngày</div>
+          </div>
+          <div class="offer-item">
+            <div class="offer-label">CAM KẾT</div>
+            <div class="offer-value">Chất Lượng</div>
+          </div>
+        </div>
+
+        <div class="countdown-wrapper">
+          <div class="countdown-label">KẾT THÚC SAU</div>
+          <div class="countdown">
+            <div class="countdown-unit">
+              <span class="countdown-number" id="hours">00</span>
+              <span class="countdown-text">GIỜ</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="minutes">00</span>
+              <span class="countdown-text">PHÚT</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="seconds">00</span>
+              <span class="countdown-text">GIÂY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#order" class="hero-cta" onclick="scrollToOrder()">Đặt Hàng Ngay</a>
+    </div>
+
+    <!-- 2 KHUNG ẢNH ĐỂ GHÉP ẢNH -->
+    <div class="hero-visual">
+      <div class="photo-frame large">
+        <img src="1q.jpg" alt="Fashion Model 1">
+        <div class="photo-overlay">Số Lượng Có Hạn<br/>Nhanh Tay Kẻo Lỡ!</div>
+      </div>
+      <div class="photo-frame small">
+        <img src="haha.jpg" alt="Fashion Model 2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Flash Sale -->
+<section class="flash-sale" id="flash-sale">
+  <div class="flash-container">
+
+    <!-- Header: left title + right timer/counter -->
+    <div class="flash-header">
+      <div class="flash-header-left">
+        <div class="flash-badge">FLASH SALE ĐẶC BIỆT</div>
+        <h2 class="flash-title">Giá Sốc<br/><span>Hôm Nay</span></h2>
+        <p class="flash-subtitle">Số lượng có hạn — nhanh tay kẻo lỡ!</p>
+      </div>
+
+      <div class="flash-header-right">
+        <!-- Countdown -->
+        <div class="flash-timer-block">
+          <div class="flash-timer-label">⏱ Kết Thúc Sau</div>
+          <div class="flash-countdown-wrap">
+            <div class="flash-countdown-unit">
+              <span class="flash-countdown-number" id="flash-hours">00</span>
+              <span class="flash-countdown-text">Giờ</span>
+            </div>
+            <div class="flash-colon">:</div>
+            <div class="flash-countdown-unit">
+              <span class="flash-countdown-number" id="flash-minutes">00</span>
+              <span class="flash-countdown-text">Phút</span>
+            </div>
+            <div class="flash-colon">:</div>
+            <div class="flash-countdown-unit">
+              <span class="flash-countdown-number" id="flash-seconds">00</span>
+              <span class="flash-countdown-text">Giây</span>
+            </div>
+          </div>
+        </div>
+        <!-- Participant -->
+        <div class="flash-participant-block">
+          <div class="flash-participant-top">
+            <span class="flash-participant-label">👥 Người tham gia</span>
+            <span class="flash-participant-nums"><strong>66</strong> / 100</span>
+          </div>
+          <div class="flash-participant-bar">
+            <div class="flash-participant-fill"></div>
+          </div>
+          <div class="flash-participant-warn">⚠ Chỉ còn 34 suất — Nhanh lên kẻo hết!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Magazine Grid -->
+    <div class="flash-grid">
+
+      <!-- Card featured (lớn, span 2 hàng) -->
+      <div class="flash-card featured">
+        <div class="flash-image">
+          <img src="1e.jpg" alt="Áo Sơ Mi Nữ Tiểu Thư">
+        </div>
+        <div class="flash-tag">-50% OFF</div>
+        <div class="flash-card-num">01</div>
+        <div class="flash-info">
+          <h3 class="flash-name">Áo Sơ Mi Nữ<br/>Tiểu Thư</h3>
+          <p class="flash-desc">Thiết kế thanh lịch, form dáng chuẩn Hàn Quốc, chất liệu cao cấp.</p>
+          <div class="flash-pricing">
+            <span class="flash-price-original">499,000₫</span>
+            <span class="flash-price-sale">249,000₫</span>
+            <span class="flash-price-save">−250K</span>
+          </div>
+          <button class="btn-flash" onclick="scrollToOrder()">Mua Ngay</button>
+        </div>
+      </div>
+
+      <!-- Card nhỏ 1 -->
+      <div class="flash-card">
+        <div class="flash-image">
+          <img src="1b.jpg" alt="Đầm Xòe Công Sở">
+        </div>
+        <div class="flash-tag">-50% OFF</div>
+        <div class="flash-card-num">02</div>
+        <div class="flash-info">
+          <h3 class="flash-name">Đầm Xòe Công Sở</h3>
+          <p class="flash-desc">Sang trọng, phù hợp văn phòng và dự tiệc.</p>
+          <div class="flash-pricing">
+            <span class="flash-price-original">659,000₫</span>
+            <span class="flash-price-sale">329,000₫</span>
+            <span class="flash-price-save">−330K</span>
+          </div>
+          <button class="btn-flash" onclick="scrollToOrder()">Mua Ngay</button>
+        </div>
+      </div>
+
+      <!-- Card nhỏ 2 -->
+      <div class="flash-card">
+        <div class="flash-image">
+          <img src="1a.jpg" alt="Set Cardigan Dệt Kim">
+        </div>
+        <div class="flash-tag">-50% OFF</div>
+        <div class="flash-card-num">03</div>
+        <div class="flash-info">
+          <h3 class="flash-name">Set Cardigan Dệt Kim</h3>
+          <p class="flash-desc">Ấm áp, thời trang, dễ phối đồ.</p>
+          <div class="flash-pricing">
+            <span class="flash-price-original">599,000₫</span>
+            <span class="flash-price-sale">299,000₫</span>
+            <span class="flash-price-save">−300K</span>
+          </div>
+          <button class="btn-flash" onclick="scrollToOrder()">Mua Ngay</button>
+        </div>
+      </div>
+
+      <!-- Card nhỏ 3 — full width hàng 2 cột phải -->
+      <div class="flash-card" style="grid-column: 2 / 4;">
+        <div class="flash-image">
+          <img src="z7714566474766_9e21a7c6412da182e8e09c5f49418e87.jpg" alt="Chân Váy Dáng Dài">
+        </div>
+        <div class="flash-tag">-50% OFF</div>
+        <div class="flash-card-num">04</div>
+        <div class="flash-info">
+          <h3 class="flash-name">Chân Váy Dáng Dài</h3>
+          <p class="flash-desc">Kiểu dáng tinh tế, che khuyết điểm hoàn hảo, tôn dáng tối đa.</p>
+          <div class="flash-pricing">
+            <span class="flash-price-original">399,000₫</span>
+            <span class="flash-price-sale">199,000₫</span>
+            <span class="flash-price-save">−200K</span>
+          </div>
+          <button class="btn-flash" onclick="scrollToOrder()">Mua Ngay</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Tiers -->
+<section class="tiers" id="tiers">
+  <div class="tiers-container">
+    <div class="tiers-header">
+      <h2 class="tiers-title">Mua Nhiều — Giảm Sâu Hơn!</h2>
+      <p class="tiers-subtitle">Chọn số lượng phù hợp để nhận ưu đãi tốt nhất</p>
+    </div>
+    <div class="tiers-grid">
+      <div class="tier">
+        <div class="tier-badge">BASIC</div>
+        <div class="tier-qty animated-number">1</div>
+        <div class="tier-label">SẢN PHẨM</div>
+        <div class="tier-discount">-30%</div>
+        <p class="tier-desc">Phù hợp cho bạn muốn thử sản phẩm lần đầu.</p>
+        <ul class="tier-features">
+          <li>Giảm 30% giá sản phẩm</li>
+          <li>Freeship toàn quốc</li>
+          <li>Đổi trả trong 7 ngày</li>
+        </ul>
+        <button class="tier-cta" onclick="scrollToOrder()">Chọn Gói Này</button>
+      </div>
+
+      <div class="tier featured">
+        <div class="tier-badge">PHỔ BIẾN</div>
+        <div class="tier-qty animated-number">2</div>
+        <div class="tier-label">SẢN PHẨM</div>
+        <div class="tier-discount">-40%</div>
+        <p class="tier-desc">Lựa chọn thông minh cho tủ đồ đa dạng.</p>
+        <ul class="tier-features">
+          <li>Giảm 40% giá sản phẩm</li>
+          <li>Freeship toàn quốc</li>
+          <li>Đổi trả trong 7 ngày</li>
+          <li>Quà tặng đặc biệt</li>
+        </ul>
+        <button class="tier-cta" onclick="scrollToOrder()">Chọn Gói Này</button>
+      </div>
+
+      <div class="tier">
+        <div class="tier-badge">BEST VALUE</div>
+        <div class="tier-qty animated-number">3+</div>
+        <div class="tier-label">SẢN PHẨM</div>
+        <div class="tier-discount">-50%</div>
+        <p class="tier-desc">Tiết kiệm tối đa, phù hợp mua cho nhóm bạn.</p>
+        <ul class="tier-features">
+          <li>Giảm 50% giá sản phẩm</li>
+          <li>Freeship toàn quốc</li>
+          <li>Đổi trả trong 7 ngày</li>
+          <li>Quà tặng đặc biệt</li>
+          <li>Tích điểm thành viên VIP</li>
+        </ul>
+        <button class="tier-cta" onclick="scrollToOrder()">Chọn Gói Này</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Order Form -->
+<section class="order-section" id="order">
+  <div class="order-container">
+    <div class="order-content">
+      <div class="order-header"><h2 class="order-title">Đặt Hàng Nhanh<br/>Giữ Ưu Đãi Ngay!</h2><p class="order-subtitle">Điền thông tin bên dưới để được ưu tiên giao hàng nhanh nhất</p></div>
+      <div class="order-urgency">Đặt hàng ngay — Giảm giá kết thúc hôm nay</div>
+      <form class="order-form" onsubmit="submitOrder(event)">
+        <div class="form-group"><label>Họ và Tên</label><input type="text" placeholder="Nguyễn Văn A" required></div>
+        <div class="form-row"><div class="form-group"><label>Số Điện Thoại</label><input type="tel" placeholder="0912345678" required></div><div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com"></div></div>
+        <div class="form-group"><label>Địa Chỉ Giao Hàng</label><textarea placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" required rows="3"></textarea></div>
+        <div class="form-row"><div class="form-group"><label>Chọn Sản Phẩm</label><select id="productSelect" required onchange="updatePricing()"><option value="">-- Chọn sản phẩm --</option><option value="249000">Áo Sơ Mi Nữ Tiểu Thư - 249,000₫</option><option value="329000">Đầm Xòe Công Sở - 329,000₫</option><option value="299000">Set Cardigan Dệt Kim - 299,000₫</option><option value="199000">Chân Váy Dáng Dài - 199,000₫</option></select></div><div class="form-group"><label>Chọn Size</label><select required><option value="">-- Chọn size --</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></div></div>
+        <div class="form-group-quantity"><span class="quantity-label">Số Lượng</span><div class="quantity-controls"><button type="button" class="qty-btn" onclick="changeQuantity(-1)">−</button><span class="qty-display" id="quantityDisplay">1</span><button type="button" class="qty-btn" onclick="changeQuantity(1)">+</button></div></div>
+        <div class="price-breakdown" id="priceBreakdown" style="display:none;"><div class="price-row"><span>Giá sản phẩm</span><span id="basePrice">0₫</span></div><div class="price-row"><span>Số lượng</span><span id="qtyPrice">× 1</span></div><div class="price-row"><span>Giảm giá <span class="tier-badge" id="tierBadge">-30%</span></span><span class="savings-highlight" id="discount">0₫</span></div><div class="price-row total"><span>Tổng thanh toán</span><span id="totalPrice">0₫</span></div></div>
+        <button type="submit" class="btn-submit">Đặt Hàng Ngay — Giảm Giá Kết Thúc Hôm Nay</button>
+        <div class="order-trust"><div class="order-trust-item"><div class="order-trust-badge">✓</div><div class="order-trust-text">100% Hàng<br/>Chính Hãng</div></div><div class="order-trust-item"><div class="order-trust-badge">✓</div><div class="order-trust-text">Đổi Trả<br/>7 Ngày</div></div><div class="order-trust-item"><div class="order-trust-badge">✓</div><div class="order-trust-text">Freeship<br/>Toàn Quốc</div></div><div class="order-trust-item"><div class="order-trust-badge">✓</div><div class="order-trust-text">Tư Vấn<br/>24/7</div></div></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee thông báo đặt ở dưới (trước footer) -->
+
+<!-- Benefits — đặt SAU form đặt hàng -->
+<section class="benefits" id="benefits">
+  <div class="benefits-container">
+    <div class="benefits-header">
+      <h2 class="benefits-title">Tại Sao Chọn ELERA?</h2>
+      <p class="benefits-subtitle">Cam kết mang đến trải nghiệm mua sắm tốt nhất cho bạn</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </span>
+        <h3 class="benefit-title">Freeship Toàn Quốc</h3>
+        <p class="benefit-desc">Miễn phí vận chuyển cho mọi đơn hàng trên toàn quốc, giao nhanh trong 2-3 ngày.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/><polyline points="23 20 23 14 17 14"/>
+          </svg>
+        </span>
+        <h3 class="benefit-title">Đổi Trả 7 Ngày</h3>
+        <p class="benefit-desc">Chính sách đổi trả linh hoạt, hoàn tiền 100% nếu sản phẩm không đúng mô tả.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </span>
+        <h3 class="benefit-title">Cam Kết Chất Lượng</h3>
+        <p class="benefit-desc">100% hàng chính hãng, kiểm định kỹ lưỡng trước khi giao đến tay bạn.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="12" y1="7" x2="12" y2="13"/>
+          </svg>
+        </span>
+        <h3 class="benefit-title">Hỗ Trợ 24/7</h3>
+        <p class="benefit-desc">Đội ngũ tư vấn nhiệt tình, sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="notification-ticker">
+  <div class="ticker-content" id="tickerContent"></div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo">ELERA</div><p class="footer-text">Thời Trang Nữ Cao Cấp — Mang Đến Phong Cách Riêng Cho Bạn.<br/><br/>Hotline: <strong>1900 xxxx</strong><br/>Email: <strong>support@elera.vn</strong><br/>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</p><div class="footer-social"><a href="#" class="social-link" aria-label="Facebook">F</a><a href="#" class="social-link" aria-label="Instagram">I</a><a href="#" class="social-link" aria-label="TikTok">T</a><a href="#" class="social-link" aria-label="Pinterest">P</a></div></div>
+      <div class="footer-section"><h4>Về ELERA</h4><ul class="footer-links"><li><a href="#about">Giới Thiệu</a></li><li><a href="#story">Câu Chuyện Thương Hiệu</a></li><li><a href="#stores">Hệ Thống Cửa Hàng</a></li><li><a href="#careers">Tuyển Dụng</a></li></ul></div>
+      <div class="footer-section"><h4>Chính Sách</h4><ul class="footer-links"><li><a href="#terms">Điều Khoản Sử Dụng</a></li><li><a href="#privacy">Chính Sách Bảo Mật</a></li><li><a href="#return">Chính Sách Đổi Trả</a></li><li><a href="#shipping">Chính Sách Vận Chuyển</a></li><li><a href="#payment">Hướng Dẫn Thanh Toán</a></li></ul></div>
+      <div class="footer-section"><h4>Hỗ Trợ</h4><ul class="footer-links"><li><a href="#faq">Câu Hỏi Thường Gặp</a></li><li><a href="#size-guide">Hướng Dẫn Chọn Size</a></li><li><a href="#care">Hướng Dẫn Bảo Quản</a></li><li><a href="#contact">Liên Hệ</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">© 2024 ELERA. Thương Hiệu Được Bảo Hộ. | Designed with ❤️ in Vietnam</div></div>
+  </div>
+</footer>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal">
+  <div class="modal-content"><div class="modal-check">✓</div><h3 class="modal-title">Đặt Hàng Thành Công!</h3><p class="modal-text">Cảm ơn bạn đã tin tưởng ELERA! Chúng tôi sẽ liên hệ xác nhận đơn hàng trong vòng 15 phút.<br><br>Mã đơn hàng: <span class="modal-code" id="orderCode"></span></p><button class="btn-modal" onclick="closeModal()">Hoàn Tất</button></div>
+</div>
+
+<script>
+// GLOBAL STATE
+let quantity = 1;
+let selectedPrice = 0;
+let saleEnded = false;
+
+// REALTIME NOTIFICATION TICKER (sinh nội dung mới)
+function generateTickerNotifications() {
+  const names = ['Lan Anh', 'Thu Hương', 'Minh Châu', 'Bảo Trâm', 'Hà My', 'Ngọc Anh', 'Phương Thảo', 'Linh Chi', 'Khánh Ly', 'Mai Anh', 'Thanh Hương', 'Diệu Linh', 'Quỳnh Như', 'Tú Anh', 'Hồng Nhung'];
+  const cities = ['Hà Nội', 'TP.HCM', 'Đà Nẵng', 'Cần Thơ', 'Hải Phòng', 'Nha Trang', 'Huế', 'Vũng Tàu', 'Bình Dương', 'Đồng Nai', 'Nghệ An', 'Thanh Hóa', 'Quảng Ninh', 'Lâm Đồng'];
+  const products = ['Áo Sơ Mi Nữ Tiểu Thư', 'Đầm Xòe Công Sở', 'Set Cardigan Dệt Kim', 'Chân Váy Dáng Dài', 'Blazer Cao Cấp', 'Váy Dạ Hội', 'Set Vest Công Sở'];
+  const actions = ['vừa đặt mua', 'vừa thanh toán', 'đã mua thành công', 'vừa nhận hàng'];
+  
+  let notifications = [];
+  for (let i = 0; i < 20; i++) {
+    const name = names[Math.floor(Math.random() * names.length)];
+    const city = cities[Math.floor(Math.random() * cities.length)];
+    const product = products[Math.floor(Math.random() * products.length)];
+    const action = actions[Math.floor(Math.random() * actions.length)];
+    notifications.push(`<div class="ticker-item"><span class="ticker-icon">✓</span><span class="ticker-name">${name}</span> ở <span class="ticker-name">${city}</span> ${action} <span class="ticker-product">${product}</span></div>`);
+  }
+  const tickerContent = document.getElementById('tickerContent');
+  if (tickerContent) tickerContent.innerHTML = notifications.join('') + notifications.join('');
+}
+setInterval(() => { generateTickerNotifications(); }, 20000);
+generateTickerNotifications();
+
+// MOBILE MENU
+function toggleMobileMenu() {
+  const mobileNav = document.getElementById('mobileNav');
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  mobileNav.classList.toggle('active');
+  toggle.classList.toggle('active');
+}
+document.addEventListener('click', function(event) {
+  const mobileNav = document.getElementById('mobileNav');
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  if (!mobileNav.contains(event.target) && !toggle.contains(event.target)) {
+    mobileNav.classList.remove('active');
+    toggle.classList.remove('active');
+  }
+});
+
+// COUNTDOWN
+function startCountdown() {
+  const endTime = new Date(); endTime.setHours(23, 59, 59, 999);
+  function update() {
+    const now = new Date();
+    const diff = endTime - now;
+    if (diff <= 0) {
+      saleEnded = true;
+      ['hours', 'minutes', 'seconds'].forEach(id => { let el = document.getElementById(id); if (el) el.textContent = '00'; });
+      document.querySelectorAll('.hero-cta, .btn-flash, .btn-submit').forEach(btn => { btn.style.opacity = '0.5'; btn.style.pointerEvents = 'none'; btn.innerHTML = '⏰ ƯU ĐÃI ĐÃ KẾT THÚC'; });
+      document.querySelectorAll('.order-urgency').forEach(el => { el.innerHTML = '⏰ Chương trình ưu đãi đã kết thúc. Hẹn gặp lại bạn trong đợt sale tiếp theo!'; el.style.background = 'linear-gradient(135deg, #666 0%, #444 100%)'; });
+      return;
+    }
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    const fh = document.getElementById('flash-hours'); if(fh) fh.textContent = hours.toString().padStart(2,'0');
+    const fm = document.getElementById('flash-minutes'); if(fm) fm.textContent = minutes.toString().padStart(2,'0');
+    const fs = document.getElementById('flash-seconds'); if(fs) fs.textContent = seconds.toString().padStart(2,'0');
+  }
+  update(); setInterval(update, 1000);
+}
+
+// DYNAMIC PRICING
+function getTierDiscount(qty) {
+  if (qty === 1) return { rate: 0.30, label: '30%' };
+  if (qty === 2) return { rate: 0.40, label: '40%' };
+  if (qty >= 3) return { rate: 0.50, label: '50%' };
+  return { rate: 0, label: '0%' };
+}
+function formatPrice(price) { return price.toLocaleString('vi-VN') + '₫'; }
+function updatePricing() {
+  const select = document.getElementById('productSelect');
+  selectedPrice = parseInt(select.value) || 0;
+  if (selectedPrice === 0) { document.getElementById('priceBreakdown').style.display = 'none'; return; }
+  document.getElementById('priceBreakdown').style.display = 'block';
+  const tier = getTierDiscount(quantity);
+  const subtotal = selectedPrice * quantity;
+  const discountAmount = Math.floor(subtotal * tier.rate);
+  const total = subtotal - discountAmount;
+  document.getElementById('basePrice').textContent = formatPrice(selectedPrice);
+  document.getElementById('qtyPrice').textContent = `× ${quantity}`;
+  document.getElementById('tierBadge').textContent = `-${tier.label}`;
+  document.getElementById('discount').textContent = `−${formatPrice(discountAmount)}`;
+  document.getElementById('totalPrice').textContent = formatPrice(total);
+}
+function changeQuantity(delta) { quantity = Math.max(1, quantity + delta); document.getElementById('quantityDisplay').textContent = quantity; updatePricing(); }
+function scrollToOrder() { document.getElementById('order').scrollIntoView({ behavior: 'smooth' }); }
+function submitOrder(event) {
+  event.preventDefault();
+  if (saleEnded) { alert('Xin lỗi, chương trình ưu đãi đã kết thúc!'); return; }
+  const orderCode = 'ELERA' + Math.random().toString(36).substr(2, 8).toUpperCase();
+  document.getElementById('orderCode').textContent = '#' + orderCode;
+  document.getElementById('successModal').classList.add('active');
+  event.target.reset();
+  quantity = 1; selectedPrice = 0;
+  document.getElementById('quantityDisplay').textContent = '1';
+  document.getElementById('priceBreakdown').style.display = 'none';
+}
+function closeModal() { document.getElementById('successModal').classList.remove('active'); }
+document.addEventListener('DOMContentLoaded', function() { startCountdown(); });
+</script>
+</body>
+</html>
